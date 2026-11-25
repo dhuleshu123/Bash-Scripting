@@ -1,78 +1,54 @@
-# Bash Shell Scripting Repository
+# Bash Scripting Guide & Practice
 
-A complete collection of **29 foundational-to-intermediate Bash shell scripts** (`01` through `29`) alongside sample input files (`names.txt` and `test.csv`).
+A structured collection of **41 Bash shell scripts** (`01` through `41`), reference PDFs, and sample input data designed for learning Linux command-line automation from basic syntax to real-world system administration.
 
----
+## Repository Contents
 
-## 📂 Complete Script Directory
+### 1. Core Basics & Data Structures (`01` – `09`)
+* **Basics & Comments** (`01`–`02`): Shebang setup, standard output, and single/multi-line comments.
+* **Variables & Constants** (`03`–`04`): Mutable variables, command substitution, and read-only values.
+* **Arrays & Strings** (`05`–`07`): Indexed arrays, associative key-value maps, and string manipulation.
+* **Input & Math** (`08`–`09`): Interactive user prompts and integer arithmetic operations.
 
-| # | File Name | Topic | Description |
-| :--- | :--- | :--- | :--- |
-| 01 | `01_basic.sh` | Basics | Demonstrates the `#!/bin/bash` shebang and printing text with `echo`. |
-| 02 | `02_comments.sh` | Comments | Shows single-line (`#`) and multi-line (`<<comment ... comment`) comments. |
-| 03 | `03_vardemo.sh` | Variables | Covers variable assignment, reassignment, and command substitution (`$(hostname)`). |
-| 04 | `04_constant_var.sh` | Constants | Declares immutable read-only variables using `readonly`. |
-| 05 | `05_arrays.sh` | Indexed Arrays | Creates arrays, accesses indices, finds length, slices elements, and appends items. |
-| 06 | `06_key-value.sh` | Associative Arrays | Declares and queries key-value pairs using `declare -A`. |
-| 07 | `07_string_ops.sh` | String Operations | Calculates string length, changes case (`^^` / `,,`), replaces words, and slices strings. |
-| 08 | `08_user_int.sh` | User Interaction | Prompts the user and captures input into a variable using `read -p`. |
-| 09 | `09_airth_ops.sh` | Arithmetic | Performs integer math operations using `let` and double parentheses `(( ))`. |
-| 10 | `10_if-else.sh` | Conditionals | Evaluates numeric comparisons with a standard `if-else` statement. |
-| 11 | `11_elif-demo.sh` | Multi-Branch | Evaluates multiple score ranges using `if-elif-else`. |
-| 12 | `12_case_demo.sh` | Case Statements | Implements an interactive menu using `case ... esac`. |
-| 13 | `13_logical-ops.sh` | Logical Operators | Combines multiple conditions using logical AND (`&&`) and OR (`||`). |
-| 14 | `14_ternary-ops.sh` | Ternary Shorthand | Executes single-line conditional logic via `cond1 && cond2 || cond3`. |
-| 15 | `15_forloop1.sh` | For Loops | Iterates through lists of numbers and strings. |
-| 16 | `16_for_with_file.sh` | File Iteration | Reads and loops over entries from `names.txt`. |
-| 17 | `17_for_with_array.sh` | Array Iteration | Traverses an array using a C-style `for (( i=0; i<$length; i++ ))` loop. |
-| 18 | `18_while_demo.sh` | While Loops | Increments a counter from 0 to 10 while a condition remains true. |
-| 19 | `19_until_loop.sh` | Until Loops | Counts down from 10 until a target condition becomes true. |
-| 20 | `20_infinite_loop.sh` | Infinite While | Runs an endless loop using `while true` with a 2-second `sleep` delay. |
-| 21 | `21_infinite_for_loop.sh` | Infinite For | Runs an endless C-style `for (( ;; ))` loop with a 2-second delay. |
-| 22 | `22_while_with_file.sh` | File Redirection | Reads lines sequentially from `names.txt` using `<` redirection. |
-| 23 | `23_while_with_csv.sh` | CSV Parsing | Parses comma-separated columns from `test.csv` using `IFS=","` and `awk`. |
-| 24 | `24_function_demo.sh` | Functions | Defines and invokes a reusable `welcomeNote` function. |
-| 25 | `25_function_with_arg.sh` | Function Arguments | Passes positional parameters (`$1`, `$2`) into function calls. |
-| 26 | `26_args.sh` | Script Arguments | Validates arguments (`$#` and `exit 1`), prints `$@`, and loops over inputs. |
-| 27 | `27_shift_args.sh` | Shifting Arguments | Uses `shift` to group remaining arguments into a multi-word description. |
-| 28 | `28_break.sh` | Loop Control (`break`) | Searches a sequence and terminates the loop early once a match is found. |
-| 29 | `29_continue.sh` | Loop Control (`continue`) | Skips even numbers in a loop to print only odd values. |
+### 2. Conditionals & Loops (`10` – `23`, `28` – `29`)
+* **Decision Making** (`10`–`14`): `if-else`, `elif` branches, `case` menus, logical operators, and shorthand expressions.
+* **Iteration** (`15`–`21`): `for`, `while`, `until`, and infinite loop patterns across numbers, arrays, and files.
+* **File & CSV Processing** (`22`–`23`): Line-by-line input redirection and parsing comma-separated records.
+* **Flow Control** (`28`–`29`): Exiting loops early (`break`) and skipping iterations (`continue`).
 
-### Supporting Data Files
-* **`names.txt`**: Sample list of names used by `16_for_with_file.sh` and `22_while_with_file.sh`.
-* **`test.csv`**: Sample comma-separated records (`id,name,age`) used by `23_while_with_csv.sh`.
+### 3. Functions & Script Arguments (`24` – `27`, `35`)
+* **Functions** (`24`–`25`): Defining reusable functions and passing positional arguments.
+* **CLI Parameters** (`26`–`27`, `35`): Validating argument counts, shifting multi-word inputs, and reading the active script name.
 
----
+### 4. System Administration & Utilities (`30` – `34`, `36` – `41`)
+* **Checks & Validation** (`30`–`31`, `33`): Network connectivity checks, file existence verification, and root privilege validation.
+* **Utilities & Logging** (`32`, `34`, `36`–`37`): Random number generation, output redirection, syslog integration, and script debugging.
+* **System Monitoring & Automation** (`38`–`41`): RAM usage alerts, filesystem disk monitoring, automated project archiving, and local user account creation.
 
-## 🚀 How to Run
+### 5. Reference Guides & Sample Data
+* **Study Guide PDF**: Comprehensive notes covering core shell scripting concepts.
+* **Scripts & Outputs PDF**: Consolidated reference pairing script code with sample terminal outputs.
+* **Sample Data (`test.csv`)**: Comma-separated records used for testing CSV parsing scripts.
 
-1. **Clone the repository:**
+## Quick Start
+
+1. **Clone this repository:**
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-folder>
+   git clone https://github.com
+   cd Bash-Scripting
    ```
-
-2. **Grant execute permissions:**
+2. **Make the scripts executable:**
    ```bash
    chmod +x *.sh
    ```
-
-3. **Execute any script:**
+3. **Run any script:**
    ```bash
    ./01_basic.sh
-   # Or run directly with bash:
-   bash 26_args.sh arg1 arg2
    ```
 
----
+## Common Comparison Operators
 
-## 📊 Bash Comparison Operators Reference
-
-| Operator | Meaning |
-| :--- | :--- |
-| `-eq` / `==` | Equal to |
-| `-ne` / `!=` | Not equal to |
-| `-gt` | Greater than |
-| `-ge` | Greater than or equal to |
-| `-lt` | Less than |
-| `-le` | Less than or equal to |
+* `-eq` / `==` : Equal to
+* `-ne` / `!=` : Not equal to
+* `-gt` / `-ge` : Greater than / Greater than or equal to
+* `-lt` / `-le` : Less than / Less than or equal to
