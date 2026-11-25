@@ -49,6 +49,11 @@ A complete collection of **29 foundational-to-intermediate Bash shell scripts** 
 | 39 | `39_fs_status.sh` | Monitoring Disk Space & Email Alert  | Checks partition disk usage and sends an email alert via mail (requires Postfix setup). |
 | 40 | `40_archive_project.sh` | Archive Older/Large Logs | Finds files larger than 20MB in a target directory, compresses them with gzip, and moves them into an archive folder. |
 | 41 | `41_user_make.sh` | Local User Management | Creates a new Linux user with root validation, auto-generates a password, enforces password reset on first login, and prints credentials. |
+| 42 | `42_service_autoheal.sh` | Service Monitoring & Auto-Recovery | In production environments, cron jobs run scripts like this every minute to verify that critical services (nginx, sshd, docker) are running and automatically restart them if they crash. |
+| 43 | `43_api_health_check.sh` | HTTP Endpoint & JSON API Monitoring |  DevOps engineers constantly use curl in CI/CD pipelines and monitoring scripts to check whether a web service or microservice returns HTTP 200 before routing traffic to it. |
+| 44 | `44_backup_rotation.sh` | Timestamped Backups & Retention Cleanup | Real backup scripts must not only create compressed archives (tar -czf), but also enforce retention policies (find ... -mtime +7 -delete) so old backups do not fill up server disks. |
+| 45 | `45_getopts_and_trap.sh` | CLI Flags, Lockfiles & Signal Cleanup | Production scripts accept clean command-line flags (-e prod -u deploy) using getopts and use trap to guarantee temporary files or lockfiles are removed even if the script crashes or the user presses Ctrl+C. |
+| 46 | `46_log_analyzer.sh` | Security & Web Log Parsing with awk/grep | Extracting top failing IP addresses from SSH logs or HTTP error counts from Nginx/Apache access logs is one of the most frequent real-time troubleshooting tasks. |
 
 ### Supporting Data Files
 * **`names.txt`**: Sample list of names used by `16_for_with_file.sh` and `22_while_with_file.sh`.
