@@ -37,6 +37,18 @@ A complete collection of **29 foundational-to-intermediate Bash shell scripts** 
 | 27 | `27_shift_args.sh` | Shifting Arguments | Uses `shift` to group remaining arguments into a multi-word description. |
 | 28 | `28_break.sh` | Loop Control (`break`) | Searches a sequence and terminates the loop early once a match is found. |
 | 29 | `29_continue.sh` | Loop Control (`continue`) | Skips even numbers in a loop to print only odd values. |
+| 30 | `30_connectivity_check.sh` | Connectivity Check | Checking host connectivity using ping, exit status ($?), and /dev/null. |
+| 31 | `31_file_exit_check.sh` | Check File/Directory Existence | Checking if a file exists and creating it if missing. |
+| 32 | `32_dice.sh` | RANDOM Number|  Generating random numbers between 1 and 6 using $RANDOM. |
+| 33 | `33_root_usercheck.sh` | Root Check | Verifying root privileges using $UID. |
+| 34 | `34_redirect.sh` | Redirection | Output redirection,. |
+| 35 | `35_scriptname.sh` | Script Name | Print Script Name ($0). |
+| 36 | `36_logger.sh` | logging | system logging. |
+| 37 | `37_debugging.sh` |  Debugging | Debugging & Error Exit (set -x / set -e). |
+| 38 | `38_ram_status.sh` | Monitoring Free RAM Space  | Alerts if free RAM drops below a specified threshold. |
+| 39 | `39_fs_status.sh` | Monitoring Disk Space & Email Alert  | Checks partition disk usage and sends an email alert via mail (requires Postfix setup). |
+| 40 | `40_archive_project.sh` | Archive Older/Large Logs | Finds files larger than 20MB in a target directory, compresses them with gzip, and moves them into an archive folder. |
+| 41 | `41_user_make.sh` | Local User Management | Creates a new Linux user with root validation, auto-generates a password, enforces password reset on first login, and prints credentials. |
 
 ### Supporting Data Files
 * **`names.txt`**: Sample list of names used by `16_for_with_file.sh` and `22_while_with_file.sh`.
